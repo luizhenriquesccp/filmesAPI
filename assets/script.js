@@ -44,7 +44,7 @@ function mostrarDetalhes(filme) {
 
 async function carregarTodosFilmes() {
   const container = document.getElementById('filmes');
-  container.innerHTML = '<p>Carregando...</p>';
+  container.innerHTML = '<div class="loading-container"></div>';
   try {
     const apiKey = 'f820539f';
     const firstResp = await fetch(`https://www.omdbapi.com/?s=movie&apikey=${apiKey}&type=movie&page=1`);
